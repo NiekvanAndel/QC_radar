@@ -87,41 +87,4 @@ for i in np.arange(nint,np.shape(df_sensors2)[0]):
                     else: #dus als de sensor nul aangeeft, maar de radar niet nul (continu) in die periode
                         FZ_array[i,j]=1
 
-
-'''
-for i in np.arange(nint,np.shape(df_sensors2)[0]):
-    print(i)
-    for j in np.arange(np.shape(df_sensors2)[1]):
-
-        if (np.sum(Sensor_array[i-nint:i+1,j])>=0)==False : #if there is to little info
-
-            if FZ_array[i-1,j]==1: #als er voor de vorige meting dan al bepaald is, dat er een FZ is, dan verandert er niets
-                FZ_array[i,j]=1
-
-            elif FZ_array[i-1,j]==0: #als er voor de vorige meting dan al bepaald is, dat er geen FZ is, dan verandert er niets
-                FZ_array[i,j]=0
-
-            else:                   #en anders dan is er te weinig info, dus -1
-                FZ_array[i,j]=-1
-
-        elif np.sum(Sensor_array[i-nint:i+1,j]) >0: #als de meetserie geen 0 geeft: alles prima
-
-            FZ_array[i,j]=0
-
-
-        else:                 #als er een serie nullen is
-
-            if (np.sum(Ref_array[i-nint:i+1,j])>=0)==False: #als de radar geen waarde heeft om mee te vergelijken
-                if FZ_array[i-1,j]==1: #als er voor de vorige meting dan al bepaald is, dat er een FZ is, dan verandert er niets
-                    FZ_array[i,j]=1
-                else:
-                    FZ_array[i,j]=-1
-
-            elif np.sum(Ref_array[i-nint:i+1,j]) <nint+1: #als de radar ook minstens af en toe nul aangeeft: dan is alles prima
-                FZ_array[i,j]=0
-
-            else: #dus als de sensor nul aangeeft, maar de radar niet nul in die periode
-                FZ_array[i,j]=1
-                '''
-
 np.save(loc_output+'/FZ_filter.npy', FZ_array)
