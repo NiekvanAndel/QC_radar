@@ -108,7 +108,7 @@ else:
 print('neighbourlist created')
 
 # In[122]:
-'''
+
 ##calculate intervals of comparison: if comparelist.npy has not been calculated, calculate it here. If not: quote this part.
 Nintrain=np.zeros(np.shape(df_sensors2))
 Nintrain[np.where(df_sensors2>0)]=1
@@ -140,7 +140,7 @@ for i in np.arange(np.shape(df_sensors2)[0]):
             comparelist[i,j]=compareB[i,j]
 
 np.save(loc_output+'/comparelist.npy',comparelist)
-'''
+
 print('comparelist created')
 
 ##calculate bias of the RAP radar product at sensor locations (leave one out method)
