@@ -1,5 +1,19 @@
 '''
-PWS QC-radar | Niek van Andel
+##| creatieve commons attribution share alike | cc-by-sa 4.0 | Lotte de Vos |##
+
+
+
+
+
+##   This program is distributed in the hope that it will be useful,
+
+
+##   but WITHOUT ANY WARRANTY; without even the implied warranty of
+
+
+##   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+PWS QC-radar | Niek van Andel | based on QC by Lotte de Vos
 Script 1.2: calculating Station Outlier flags
 
 Input:
